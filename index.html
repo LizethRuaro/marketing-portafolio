@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lizeth Ruaro Portafolio</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylemarketing.css">
+</head>
+
+<body>
+
+    <!-- Navbar horizontal -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#img1">Lizeth Ruaro</a></li>
+            <li><a href="#img2">Sobre mí</a></li>
+            <li><a href="#img3">Habilidades</a></li>
+            <li><a href="#img4">Formación</a></li>
+            <li><a href="#img5">Herramientas</a></li>
+            <li><a href="#img6">Catálogo</a></li>
+            <li><a href="#img11">CV</a></li>
+            <li><a href="#img14">Contáctame</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido -->
+    <main class="content">
+        <section id="img1">
+            <img src="imagenes/1i.jpg">
+        </section>
+
+        <section id="img2">
+            <img src="imagenes/2i.jpg">
+        </section>
+        <section id="img3">
+            <img src="imagenes/3a.jpg">
+        </section>
+
+        <section id="img4">
+            <img src="imagenes/4.jpg">
+        </section>
+        <section id="img5">
+            <img src="imagenes/5.jpg">
+        </section>
+
+        <section id="img6">
+            <img src="imagenes/6.jpg">
+        </section>
+        <section id="img7">
+            <img src="imagenes/7.jpg">
+        </section>
+
+        <section id="img8">
+            <img src="imagenes/8.jpg">
+        </section>
+        <section id="img9">
+            <img src="imagenes/9.jpg">
+        </section>
+
+        <section id="img10">
+            <img src="imagenes/10.jpg">
+        </section>
+        <section id="img11" class="cv-section">
+            <img src="imagenes/11.jpg" alt="CV">
+
+            <a href="Lizeth_Ruaro_CV.pdf" download class="cv-download">
+                Descarga mi CV
+            </a>
+        </section>
+        <section id="img12">
+            <img src="imagenes/12a.jpg">
+        </section>
+        <section id="img13">
+            <img src="imagenes/13a.jpg">
+        </section>
+        <section id="img14" class="last-image">
+            <img src="imagenes/14.jpg" alt="Descripción">
+
+            <a href="mailto:ruarolizeth@gmail.com" class="mail-button">
+                ¡Envíame un mail!
+            </a>
+        </section>
+    </main>
+    <script>
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".navbar a");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                if (scrollY >= sectionTop - sectionHeight / 3) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === "#" + current) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

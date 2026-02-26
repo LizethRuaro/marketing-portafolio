@@ -1,0 +1,128 @@
+/* RESET TOTAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #ccbaa2;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  /* NAVBAR */
+  .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #392319; /* 👈 transparencia */
+        backdrop-filter: blur(4px);              /* 👈 efecto elegante */
+    }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+  
+  .navbar li {
+    flex: 1;
+  }
+  
+  .navbar a {
+    display: block;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .navbar a:hover {
+    background-color: #7b8642;
+  }
+  
+  .navbar a.active {
+    background-color: #7b8642;
+  }
+main {
+  padding-top: 60px;
+}
+
+section {
+  width: 100%;
+}
+
+section img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.cv-button {
+  display: inline-block;  /* vuelve a esto */
+  padding: 12px 24px;
+  background-color: #392319;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  float: right;   /* 👈 esto lo mueve */
+}
+
+.cv-button:hover {
+  background-color: #7b8642;
+}
+
+.last-image {
+  position: relative;   /* MUY IMPORTANTE */
+  display: inline-block;
+}
+
+.mail-button {
+  position: absolute;
+  bottom: 20px;   /* distancia desde abajo */
+  right: 20px;    /* distancia desde la derecha */
+  padding: 12px 24px;
+  background-color: #392319;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.mail-button:hover {
+  background-color: #7b8642;
+}
+.cv-section {
+  position: relative;   /* importante */
+  display: inline-block;
+}
+
+.cv-download {
+  position: absolute;
+  top: 180px;     /* distancia desde arriba */
+  right: 110px;   /* distancia desde la derecha */
+
+  padding: 12px 24px;
+  background-color: #392319;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.cv-download:hover {
+  background-color: #7b8642;
+}
